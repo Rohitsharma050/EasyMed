@@ -7,9 +7,6 @@ import HomeNavbar from './components/HomeNavbar.jsx'
 import Footer from './components/Footer.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HomeNavbar />
-    <Home /> 
-    <App />
-    <Footer/>
+    <App /> 
   </StrictMode>,
 )

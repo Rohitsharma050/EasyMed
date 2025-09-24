@@ -1,3 +1,21 @@
 body{
-  background: #F9FAFB;
+  background: #f9fafb;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Custom CSS for autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #F9FAFB inset; /* input ka background color */
+    -webkit-text-fill-color: #898989; /* input ka text color */
+    transition: background-color 5000s ease-in-out 0s;
 }
