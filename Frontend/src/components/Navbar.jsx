@@ -8,8 +8,10 @@ const Navbar = () => {
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400'>
         <div className='cursor-pointer'>
+    <div onClick={()=>{navigate('/')}}>
 
     <h1 className='text-4xl font-bold text-[#5f6FFF]'>Easy<span className='text-[#5f6FFF] text-4xl font-bold'>Med</span></h1>
+    </div>
         </div>
     <ul className='hidden md:flex items-start gap-5 font-medium'>
         <NavLink to={'/'}>

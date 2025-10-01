@@ -1,10 +1,12 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     // Outer container: Full width, white background, no top margin/padding
-    <div className='w-full bg-white text-gray-800'>
+    <div className='w-full bg-white text-gray-800 mt-20'>
       
      
       <div 
@@ -14,7 +16,10 @@ const Footer = () => {
         {/* ------ Left Section (Logo and Description) ------ */}
         <div className='flex flex-col gap-4'>
          
+          <div onClick={()=>{navigate('/');scrollTo(0,0)}} className='cursor-pointer'>
+
           <h1 className='text-4xl font-bold text-[#5f6FFF]'>Easy<span className='text-[#5f6FFF] text-4xl font-bold'>Med</span></h1>
+          </div>
           <p className='text-sm leading-relaxed text-gray-600'>
             Your trusted platform for healthcare appointments. <br /> Find and book appointments with verified specialists <br /> quickly and securely. We simplify the process so you can <br />focus on your health.
           </p>
@@ -25,10 +30,10 @@ const Footer = () => {
         <div className='flex flex-col gap-4'>
           <p className='text-lg font-semibold text-gray-900'>COMPANY</p>
           <ul className='flex flex-col gap-2 text-sm text-gray-600'>
-            <li className='hover:text-blue-600 cursor-pointer'>Home</li>
-            <li className='hover:text-blue-600 cursor-pointer'>About us</li>
-            <li className='hover:text-blue-600 cursor-pointer'>Contact us</li>
-            <li className='hover:text-blue-600 cursor-pointer'>Privacy policy</li>
+            <li onClick={()=>{navigate('/');scrollTo(0,0)}}  className='hover:text-blue-600 cursor-pointer'>Home</li>
+            <li onClick={()=>{navigate('/about');scrollTo(0,0)}}  className='hover:text-blue-600 cursor-pointer'>About us</li>
+            <li onClick={()=>{navigate('/contact');scrollTo(0,0)}}  className='hover:text-blue-600 cursor-pointer'>Contact us</li>
+            <li onClick={()=>{navigate('/');scrollTo(0,0)}}  className='hover:text-blue-600 cursor-pointer'>Privacy policy</li>
           </ul>
         </div>
         
